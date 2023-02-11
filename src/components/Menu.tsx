@@ -1,4 +1,4 @@
-import { FC, MouseEventHandler } from "react";
+import { FC, MouseEventHandler, useLayoutEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import XMark from "@heroicons/react/24/outline/XMarkIcon";
 import { Link } from "@tanstack/react-router";
@@ -21,12 +21,9 @@ export const Menu: FC<NavbarProps> = ({
   function toggleCategory(key: Number) {
     setActiveCategory(key);
   }
-
   const { data: categoriesResult } = useQuery(["categories"], async () => {
-    return await axios.get("https://www.zara.com/id/id/categories");
+    return await axios.get("/api/id/id/categories");
   });
-
-  // console.log(categoriesResult?.data.categories);
 
   return (
     <AnimatePresence>
@@ -61,7 +58,7 @@ export const Menu: FC<NavbarProps> = ({
               )}
             </div>
           </div>
-          <div className="overflow-y-scroll max-h-full">
+          <div className="overflow-y-scroll max-h-full relative">
             <div className="mb-8 flex flex-col gap-4">
               <div className="tracking-wider text-xs font-medium font-inter">
                 PROMOTION
