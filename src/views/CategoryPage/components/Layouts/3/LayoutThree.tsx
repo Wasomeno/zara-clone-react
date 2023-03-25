@@ -4,9 +4,9 @@ interface PropsInterface {
   componentDetails: any;
 }
 
-export const LayoutFour: FC<PropsInterface> = ({ componentDetails }) => {
+export const LayoutThree: FC<PropsInterface> = ({ componentDetails }) => {
   return (
-    <div className="col-span-1">
+    <div className="w-3/12">
       <img
         src={
           "https://static.zara.net/photos/" +
@@ -16,7 +16,7 @@ export const LayoutFour: FC<PropsInterface> = ({ componentDetails }) => {
           ".jpg?ts=" +
           componentDetails?.xmedia[0]?.timestamp
         }
-        className="h-full w-full"
+        loading="lazy"
       />
       <div className="flex justify-between w-full mt-2">
         <p className="font-inter text-xs font-light tracking-wider">

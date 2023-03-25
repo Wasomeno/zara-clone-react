@@ -2,7 +2,7 @@ import React from "react";
 
 const LoginPage = () => {
   return (
-    <div className="h-screen bg-slate-50 flex justify-start items-center gap-5">
+    <div className="flex justify-start items-center gap-5">
       <div className="w-5/6 p-2 flex justify-center gap-4">
         <div className="w-2/6">
           <div className="my-4">

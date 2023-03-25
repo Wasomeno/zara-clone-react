@@ -22,7 +22,7 @@ export const Menu: FC<NavbarProps> = ({
     setActiveCategory(key);
   }
   const { data: categoriesResult } = useQuery(["categories"], async () => {
-    return await axios.get("https://www.zara.com/id/id/categories");
+    return await axios.get("/api/id/id/categories");
   });
 
   return (

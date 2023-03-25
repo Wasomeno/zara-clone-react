@@ -18,6 +18,7 @@ export const LayoutTwo: FC<PropsInterface> = ({ componentDetails }) => {
             componentDetails?.xmedia[0]?.timestamp
           }
           className="h-3/6"
+          loading="lazy"
         />
       </div>
       <div className="flex justify-between w-full mt-2">

@@ -11,7 +11,7 @@ import "./global.css";
 import { HomePage } from "./views/HomePage";
 import LoginPage from "./views/LoginPage";
 import SearchPage from "./views/SearchPage";
-import CategoryPage from "./views/CategoryPage";
+import { CategoryPage } from "./views/CategoryPage";
 import ProductPage from "./views/ProductPage";
 import CategoryContainer from "./views/CategoryContainer";
 
