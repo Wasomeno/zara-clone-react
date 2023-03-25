@@ -8,7 +8,10 @@ export const CategoryPage = () => {
   const categoryId = categorySlug?.split("=")[1];
   const categoryProducts = useQuery(
     ["categoryProducts", categoryId],
-    async () => await axios.get(`/api/id/id/category/${categoryId}/products`)
+    async () =>
+      await axios.get(
+        `https://www.zara.com/id/id/category/${categoryId}/products`
+      )
   );
 
   return (
